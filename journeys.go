@@ -20,6 +20,7 @@ type JourneyResults struct {
 	Paging Paging `json:"links"`
 
 	Logging `json:"-"`
+	Results `json:"-"`
 
 	session *Session
 }

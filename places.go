@@ -17,6 +17,7 @@ type PlacesResults struct {
 	Places []types.Container `json:"places"`
 
 	Logging `json:"-"`
+	MultiValuesResults `json:"-"`
 }
 
 // Len is the number of Places in the results.

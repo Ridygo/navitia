@@ -30,6 +30,7 @@ type ExploreResults struct {
 	Paging Paging
 
 	Logging `json:"-"`
+	MultiValuesResults `json:"-"`
 }
 
 // UnmarshalJSON implements unmarshalling for ExploreResults

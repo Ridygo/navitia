@@ -19,6 +19,7 @@ type results interface {
 	creating()
 	sending()
 	parsing()
+	baseinfos(string, *Session)
 }
 
 // requestURL requests a url, with the query already encoded in, and decodes the result in res.
@@ -74,6 +75,8 @@ func (s *Session) requestURL(ctx context.Context, url string, res results) error
 		return errors.Wrap(err, "JSON decoding failed")
 	}
 	res.parsing()
+
+	res.baseinfos(url, s)
 
 	// Return
 	return err

@@ -21,6 +21,7 @@ type ConnectionsResults struct {
 	Paging Paging `json:"links"`
 
 	Logging `json:"-"`
+	Results `json:"-"`
 }
 
 // UnmarshalJSON implements unmarshalling for ConnectionsResults.

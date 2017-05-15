@@ -19,6 +19,7 @@ type RegionResults struct {
 
 	// Timing information
 	Logging
+	MultiValuesResults `json:"-"`
 
 	// Held session
 	session *Session

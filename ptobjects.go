@@ -19,6 +19,7 @@ type PTObjectsResults struct {
 	Paging Paging `json:"links"`
 
 	Logging `json:"-"`
+	MultiValuesResults `json:"-"`
 }
 
 // Len is the number of PTObjects in the results.

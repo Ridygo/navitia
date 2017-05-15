@@ -11,6 +11,7 @@ type coordsResults struct {
 	Regions []types.ID    `json:"regions"`
 	Address types.Address `json:"address"`
 	Logging `json:"-"`
+	SingleValueResults `json:"-"`
 }
 
 const coordsEndpoint = "coords"

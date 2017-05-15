@@ -64,6 +64,7 @@ func (req PlacesNearbyRequest) toURL() (url.Values, error) {
 type PlacesNearbyResults struct {
 	Places  []types.Container `json:"places_nearby"`
 	Logging `json:"-"`
+	MultiValuesResults `json:"-"`
 }
 
 func (s *Session) placesNearby(ctx context.Context, url string, req PlacesNearbyRequest) (*PlacesNearbyResults, error) {
